@@ -14,6 +14,11 @@ Class {
 }
 
 { #category : 'accessing' }
+EarthMapCountry >> asRSShape [
+	^ RSSVGPath new svgPath: svgPath
+]
+
+{ #category : 'accessing' }
 EarthMapCountry >> code [
 
 	^ code
@@ -23,6 +28,14 @@ EarthMapCountry >> code [
 EarthMapCountry >> code: aString [
 
 	code := aString
+]
+
+{ #category : 'accessing' }
+EarthMapCountry >> fromXML: aXMLElement [
+
+	svgPath := aXMLElement attributeAt: 'd'.
+	name := aXMLElement attributeAt: 'title'.
+	code := aXMLElement attributeAt: 'id'
 ]
 
 { #category : 'accessing' }
