@@ -1,3 +1,6 @@
+"
+EarthMap class to chow the entire world.
+"
 Class {
 	#name : 'EarthMap',
 	#superclass : 'Object',

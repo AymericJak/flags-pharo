@@ -61,7 +61,7 @@ EarthMapCountry >> name: aString [
 	name := aString
 ]
 
-{ #category : 'accessing' }
+{ #category : 'printing' }
 EarthMapCountry >> printOn: aStream [
 
 	super printOn: aStream.
