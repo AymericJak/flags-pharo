@@ -1,3 +1,6 @@
+"
+A browser to show all country flags
+"
 Class {
 	#name : 'EarthCountryBrowser',
 	#superclass : 'SpPresenterWithModel',
@@ -17,7 +20,7 @@ EarthCountryBrowser >> connectPresenters [
 		self onCountrySelected: item ]
 ]
 
-{ #category : 'initialization' }
+{ #category : 'layout' }
 EarthCountryBrowser >> defaultLayout [
 
 	^ SpBoxLayout newTopToBottom
@@ -56,6 +59,12 @@ EarthCountryBrowser >> initializePresenters [
 	countryCode text: ' -- '.
 	
 	countryFlag := self newImage
+]
+
+{ #category : 'initialization' }
+EarthCountryBrowser >> initializeWindow: aWindowPresenter [
+
+	aWindowPresenter title: 'Country flag browser'
 ]
 
 { #category : 'initialization' }
